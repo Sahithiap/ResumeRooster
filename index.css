@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: hsl(0 0% 100%);
+  --foreground: hsl(210 25% 7.8431%);
+  --card: hsl(0 0% 100%);
+  --card-foreground: hsl(210 25% 7.8431%);
+  --popover: hsl(0 0% 100%);
+  --popover-foreground: hsl(210 25% 7.8431%);
+  --primary: hsl(213 100% 40%);
+  --primary-dark: hsl(213 100% 29%);
+  --primary-foreground: hsl(0 0% 100%);
+  --secondary: hsl(210 25% 7.8431%);
+  --secondary-foreground: hsl(0 0% 100%);
+  --muted: hsl(210 40% 96%);
+  --muted-foreground: hsl(215 16% 47%);
+  --accent: hsl(210 40% 96%);
+  --accent-foreground: hsl(213 100% 40%);
+  --destructive: hsl(0 84% 60%);
+  --destructive-foreground: hsl(0 0% 100%);
+  --border: hsl(214 32% 91%);
+  --input: hsl(214 32% 91%);
+  --ring: hsl(213 100% 40%);
+  --success: hsl(142 76% 36%);
+  --warning: hsl(38 92% 50%);
+  --ai-purple: hsl(253 42% 63%);
+  --radius: 0.75rem;
+  --font-inter: 'Inter', system-ui, sans-serif;
+}
+
+.dark {
+  --background: hsl(222 84% 5%);
+  --foreground: hsl(210 40% 98%);
+  --card: hsl(222 84% 5%);
+  --card-foreground: hsl(210 40% 98%);
+  --popover: hsl(222 84% 5%);
+  --popover-foreground: hsl(210 40% 98%);
+  --primary: hsl(217 92% 58%);
+  --primary-dark: hsl(217 92% 45%);
+  --primary-foreground: hsl(222 84% 5%);
+  --secondary: hsl(217 33% 17%);
+  --secondary-foreground: hsl(210 40% 98%);
+  --muted: hsl(217 33% 17%);
+  --muted-foreground: hsl(215 20% 65%);
+  --accent: hsl(217 33% 17%);
+  --accent-foreground: hsl(210 40% 98%);
+  --destructive: hsl(0 62% 30%);
+  --destructive-foreground: hsl(210 40% 98%);
+  --border: hsl(217 33% 17%);
+  --input: hsl(217 33% 17%);
+  --ring: hsl(224 71% 4%);
+  --success: hsl(142 76% 36%);
+  --warning: hsl(38 92% 50%);
+  --ai-purple: hsl(253 42% 63%);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-inter);
+  }
+}
+
+@layer components {
+  .primary {
+    @apply bg-primary text-primary-foreground;
+  }
+  
+  .primary-dark {
+    @apply bg-primary-dark text-primary-foreground;
+  }
+  
+  .success {
+    @apply bg-success text-white;
+  }
+  
+  .warning {
+    @apply bg-warning text-white;
+  }
+  
+  .ai-purple {
+    @apply bg-ai-purple text-white;
+  }
+}
